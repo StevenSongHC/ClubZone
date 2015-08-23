@@ -1,0 +1,65 @@
+﻿#main {
+    margin: auto;
+    width: 80%;
+}
+.club-title {
+    margin: auto;
+    margin-top: 30px;
+    width: 50%;
+}
+.club-title div {
+    display: inline-block;
+}
+.club-title .photo {
+    padding: 3px;
+    width: 20%;
+    float: left;
+}
+.club-title .photo img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+}
+.club-title .info {
+    padding-left: 10px;
+    width: 75%;
+}
+.club-title .statistics {
+    display: block;
+    font-size: 13px;
+    color: #949494;
+    margin-top: 10px;
+}
+.club-title .statistics span {
+    margin-right: 50px;
+}
+#activity-list {
+    padding-left: 145px;
+}
+#article-list td {
+    padding: 15px 10px;
+}
+#article-list .reply-count {
+    width: 8%;
+}
+#article-list .reply-count span {
+    padding: 3px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: default;
+}
+#article-list .title {
+    width: 60%;
+    font-size: 16px;
+}
+#article-list .publisher {
+    width: 20%;
+}
+#article-list .date {
+    width: 12%;
+    color: #8b8b8b;
+}
+#new-article {
+    width: 70%;
+    margin: auto;
+}

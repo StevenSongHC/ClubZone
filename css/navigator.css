@@ -1,0 +1,35 @@
+﻿#navi {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    background-color: #bcc9db;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+#navi ul {
+    display: inline-block;
+    margin: 0 10px;
+}
+#navi ul li {
+    display: inline-block;
+    margin: 3px 7px;
+}
+#navi ul li a {
+    padding: 3px 5px;
+    text-decoration: none;
+}
+.link a:hover {
+    background-color: #e3effa;
+}
+.user-box .yeh a:hover {
+    background-color: #c5ffb5;
+    color: #228b22;
+}
+.user-box .nah a:hover {
+    background-color: #fffacd;
+    color: #f47402;
+}
+a .label {
+    font-size: 13px;
+}

@@ -1,0 +1,12 @@
+﻿#copyright {
+    width: 100%;
+    text-align: center;
+    background-color: #ccc;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+#copyright ul li {
+    display: inline-block;
+    margin-left: 20px;
+    color: #696969;
+}

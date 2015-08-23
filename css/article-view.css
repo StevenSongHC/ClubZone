@@ -1,0 +1,13 @@
+﻿#main {
+    width: 65%;
+    margin-left: 50px;
+}
+.jumbotron {
+    background-color: #f7fff2;
+}
+#reply-list {
+    padding-left: 50px;
+}
+#reply-list .item {
+    background-color: #d6fadf;
+}

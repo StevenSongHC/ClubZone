@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Common.master.cs" Inherits="asp_Common" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <!--[内容页]的标题-->
+    <asp:ContentPlaceHolder ID="Title" runat="server"></asp:ContentPlaceHolder>
+
+    <!--一些基础的js框架和css样式表，包括jquery，bootstrap等-->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/navigator.css" rel="stylesheet" type="text/css" />
+    <link href="/css/copyright.css" rel="stylesheet" type="text/css" />
+    <!--[内容页]另外引入的css样式表-->
+    <asp:ContentPlaceHolder ID="StyleFile" runat="server"></asp:ContentPlaceHolder>
+    <script src="/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <!--[内容页]另外引入的js脚本文件-->
+    <asp:ContentPlaceHolder ID="ScriptFile" runat="server"></asp:ContentPlaceHolder>
+    
+    <!--[内容页]添加的样式-->
+    <asp:ContentPlaceHolder ID="Style" runat="server"></asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        function logout() {
+            $.ajax({
+                url: "/asp/Logout.aspx/Logout",
+                type: "POST",
+                dataType: "JSON",
+                contentType: "application/json; charset=utf-8",
+                data: "{}"
+            }).done(function (result) {
+                var json = eval("(" + result.d + ")");
+                // 注销成功后刷新页面
+                if (json.status == 1)
+                    window.location.reload();
+                else
+                    alert("注销失败，请重试");
+            }).fail(function () {
+                alert("fail");
+            }).error(function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(textStatus);
+            });
+        }
+    </script>
+    <!--[内容页]添加的脚本-->
+    <asp:ContentPlaceHolder ID="Script" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <!--顶部导航栏-->
+    <div id="navi">
+        <ul class="link">
+            <li class="index"><a href="/">首页</a></li>
+            <li class="club"><a href="/asp/ClubNavi.aspx">社团</a></li>
+            <li class="article"><a href="/asp/ArticleNavi.aspx">帖子</a></li>
+            <li class="activity"><a href="/asp/ActivityNavi.aspx">活动</a></li>
+        </ul>
+        <ul class="user-box">
+        <% if (Request.IsAuthenticated) { %>
+            <li class="yeh">
+                <a href="/asp/PersonalHomePage.aspx"><%= Context.User.Identity.Name %></a>
+            </li>
+            <% if (Roles.IsUserInRole("admin")) { %>
+                <li><a href="/asp/admin/ClubList.aspx"><span class="label label-primary">管理员</span></a></li>
+            <% } %>
+            <li class="yeh"><a href="javascript:logout()">注销</a></li>
+        <% } else { %>
+            <li class="nah"><a href="/asp/Login.aspx">登陆</a></li>
+            <li class="nah"><a href="/asp/Register.aspx">注册</a></li>
+        <% } %>
+        </ul>
+    </div>
+
+    <!--[内容页]主体内容-->
+    <div id="main" style="padding: 20px; padding-top: 0px;">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <!--做做样子的版权声明-->
+    <div id="copyright">
+        <ul>
+            <li>&copy 2015 宋海诚 - 3112002779 - 电子信息工程3班</li>
+            <li><a href="#" target="_blank">说明</a></li>
+        </ul>
+        <ul>
+            <li>All Rights Reserved</li>
+        </ul>
+    </div>
+</body>
+</html>

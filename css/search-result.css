@@ -1,0 +1,30 @@
+﻿.page-header small {
+    float: right;
+}
+.result-list {
+    width: 50%;
+    margin: 30px 0 10px 40px;
+}
+.item {
+    padding: 20px;
+    border: 0px solid #ccc;
+    margin-bottom: 30px;
+}
+.item img {
+    width: 50px;
+    height: 50px;
+}
+.item .intro {
+    min-height: 1em;
+}
+.item .empty-intro {
+    font-size: 13px;
+    font-style: italic;
+    color: #8c8c8c;
+}
+.item .statistics {
+    font-size: 12px;
+}
+.item .statistics span {
+    margin-right: 20px;
+}

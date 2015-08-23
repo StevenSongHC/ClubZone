@@ -1,0 +1,81 @@
+﻿#navi .focus {
+    border: 1px solid #ccc3ff;
+    background-color: #f7f7f7;
+}
+#navi .focus a {
+    color: #333;
+}
+#main {
+    width: 90%;
+    margin: auto;
+}
+.row {
+    margin-top: 30px;
+}
+#article-list {
+    padding-top: 15px;
+    border: 1px solid #ccc;
+}
+#article-list a img {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+#new-club-list {
+    width: 50%;
+    margin: 30px 0 10px 40px;
+}
+#new-club-list .item {
+    padding: 20px;
+    border: 0px solid #ccc;
+    margin-bottom: 30px;
+}
+#new-club-list .item img {
+    width: 50px;
+    height: 50px;
+}
+#new-club-list .item .intro {
+    min-height: 1em;
+}
+#new-club-list .item .empty-intro {
+    font-size: 13px;
+    font-style: italic;
+    color: #8c8c8c;
+}
+#new-club-list .item .statistics {
+    font-size: 12px;
+}
+#new-club-list .item .statistics span {
+    margin-right: 20px;
+}
+#new-article-list {
+    width: 70%;
+    margin: auto;
+}
+#new-article-list td {
+    padding: 15px 10px;
+}
+#new-article-list .reply-count {
+    width: 8%;
+}
+#new-article-list .reply-count span {
+    padding: 3px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: default;
+}
+#new-article-list .title {
+    width: 60%;
+    font-size: 16px;
+}
+#new-article-list .publisher {
+    width: 20%;
+}
+#new-article-list .date {
+    width: 12%;
+    color: #8b8b8b;
+}
+#new-activity-list {
+    margin: auto;
+    width: 60%;
+}
